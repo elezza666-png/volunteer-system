@@ -1604,8 +1604,8 @@ async function submitForm() {
   try {
     if (CONFIG.GAS_URL && CONFIG.GAS_URL !== 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE') {
       const response = await fetch(CONFIG.GAS_URL, {
-     method: 'POST',
-        headers: { 'Content-Type': 'text/plain;charset=utf-8' }, // <--- التعديل هنا
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
       });
       const result = await response.json();
